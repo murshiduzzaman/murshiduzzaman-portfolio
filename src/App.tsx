@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import { lazy, Suspense } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import Index from "./pages/Index";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -41,6 +42,7 @@ const App = () => (
         <ScrollToTop />
         <AnimatedRoutes />
       </BrowserRouter>
+      <Analytics />
     </TooltipProvider>
   </QueryClientProvider>
 );
